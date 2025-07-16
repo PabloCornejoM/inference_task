@@ -10,10 +10,14 @@ import torch
 
 # simple model that doubles input values
 class DoubleIt(torch.nn.Module):
+    """A simple neural network that doubles input values."""
+    
     def __init__(self):
+        """Initialize the model."""
         super(DoubleIt, self).__init__()
 
     def forward(self, x):
+        """Forward pass that doubles the input tensor."""
         return x * 2
 
 

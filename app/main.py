@@ -19,11 +19,13 @@ app = FastAPI()
 
 # Define input schema
 class InputData(BaseModel):
+    """Input data structure for the prediction endpoint."""
     values: list[int]
 
 # Inference endpoint
 @app.post("/predict")
 def predict(data: InputData):
+    """Process input values through the model and return doubled results."""
     x = torch.tensor(data.values)
     y = model(x)
     return {"result": y.tolist()}

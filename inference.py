@@ -1,8 +1,14 @@
+"""
+Simple inference script for testing the doubleit model.
+
+Loads the saved model and runs a quick test to verify it works correctly.
+"""
+
 import torch
 
-# Example or inference. This model returns a 1-dim tensor multiplied by 2
+# Load the saved model and run a test
 ts = torch.jit.load('./doubleit_model.pt')
 sample_tensor = torch.tensor([1, 2, 3, 4])
 result = ts(sample_tensor)
 
-print(result)  # <- tensor([2, 4, 6, 8])
+print(result)  # Expected output: tensor([2, 4, 6, 8])
