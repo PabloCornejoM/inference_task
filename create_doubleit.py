@@ -3,6 +3,7 @@ Script to create a doubleit PyTorch model
 
 This script creates a simple PyTorch model that doubles input values
 and saves it as a TorchScript model, since the model was not provided.
+
 """
 
 import torch
