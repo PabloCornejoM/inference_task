@@ -5,7 +5,7 @@ Includes a simple version of all the requiremtents, testing, CI/CD, and a defini
 
 ## Structure of the repository
 
-'''
+```
 .
 ├── app/                    # FastApi application
 ├── tests/                  # Unit tests 
@@ -14,7 +14,7 @@ Includes a simple version of all the requiremtents, testing, CI/CD, and a defini
 ├── requirements.txt        # Python dependencies for venv  
 ├── .github/workflows/ci.yml # CI/CD GitHub Actions workflow
 └── README.md
-'''
+```
 
 ## Run Locally
 
@@ -25,9 +25,11 @@ Includes a simple version of all the requiremtents, testing, CI/CD, and a defini
 - Google Cloud SDK (for deployment)
 
 1. Create a virtual environment:
+   ```bash
    python -m venv venv  
    source venv/bin/activate  
-   pip install -r requirements.txt  
+   pip install -r requirements.txt
+   ```
 
 1.2. Create the model (Optional):
    ```bash
@@ -35,18 +37,24 @@ Includes a simple version of all the requiremtents, testing, CI/CD, and a defini
    ```
 
 2. Run the API:
-   uvicorn app.main:app --reload  
+   ```bash
+   uvicorn app.main:app --reload
+   ```
 
    Open the auto-generated docs at: http://localhost:8000/docs  
 
 3. Or with Docker:
+   ```bash
    docker build -t model-api .  
-   docker run -p 8000:8000 model-api  
+   docker run -p 8000:8000 model-api
+   ```
 
 
 ## Run Tests
 
+```bash
 pytest
+```
 
 ## CI/CD
 
