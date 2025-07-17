@@ -5,6 +5,7 @@ Includes a simple version of all the requiremtents, testing, CI/CD, and a defini
 
 ## Structure of the repository
 
+'''
 .
 ├── app/                    # FastApi application
 ├── tests/                  # Unit tests 
@@ -13,13 +14,25 @@ Includes a simple version of all the requiremtents, testing, CI/CD, and a defini
 ├── requirements.txt        # Python dependencies for venv  
 ├── .github/workflows/ci.yml # CI/CD GitHub Actions workflow
 └── README.md
+'''
 
 ## Run Locally
+
+### Prerequisites
+
+- Python 3.11+
+- Docker (optional)
+- Google Cloud SDK (for deployment)
 
 1. Create a virtual environment:
    python -m venv venv  
    source venv/bin/activate  
    pip install -r requirements.txt  
+
+1.2. Create the model (Optional):
+   ```bash
+   python create_doubleit.py
+   ```
 
 2. Run the API:
    uvicorn app.main:app --reload  
